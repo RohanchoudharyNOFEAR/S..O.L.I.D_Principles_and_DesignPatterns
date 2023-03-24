@@ -15,7 +15,9 @@ public class GroundedState : PlayerStatesBase
     {
       
          base.OnUpdate();
+        PSC.CameraController.CameraMove(PSC.playerInputs.InputMouseVector);
         Input = PSC.playerInputs.InputMovementVector;
+       
       //  Debug.Log(Input);
         Debug.Log("update call Into GroundedState");
     }

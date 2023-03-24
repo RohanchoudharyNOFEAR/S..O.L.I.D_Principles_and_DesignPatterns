@@ -7,6 +7,8 @@ public class PlayerStateController : MonoBehaviour//we are inheriting from playe
     [Header("Player Fields")]
     public PlayerInputs playerInputs;
     public PlayerMovement PlayerMovement;
+    public PlayerAnimations PlayerAnimations;
+    public CameraMovement CameraController;
 
 
     public PlayerStatesBase currentState { get; private set; }
@@ -20,6 +22,8 @@ public class PlayerStateController : MonoBehaviour//we are inheriting from playe
     {
         PlayerMovement = GetComponent<PlayerMovement>();
         playerInputs = GetComponent<PlayerInputs>();
+        PlayerAnimations = GetComponent<PlayerAnimations>();
+        
         ChangeState(IdleState);
     }
 

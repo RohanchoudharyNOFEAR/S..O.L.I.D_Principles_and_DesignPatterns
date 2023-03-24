@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     public float RotationSpeed { get { return _rotationSpeed; } private set { _rotationSpeed = value; } }
     public float Speed { get { return _speed; } private set { _speed = value; } }
-
+    public Vector3 PlayerVelocityVector;
     private CharacterController _cc;
 
     // Start is called before the first frame update
@@ -36,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
             Vector3 targetforward = Vector3.Cross(targetRight, Vector3.up);     // same as Vector3 targetforward = target.forward;
 
             //vector v = target forward * speed + target right * speed        [math for game development cross product]
-           // transform.position += targetforward * movementVector.z + targetRight * movementVector.x;
-            _cc.Move(targetforward * movementVector.z + targetRight * movementVector.x);
+            // transform.position += targetforward * movementVector.z + targetRight * movementVector.x;
+            PlayerVelocityVector = targetforward * movementVector.z + targetRight * movementVector.x;
+            _cc.Move(PlayerVelocityVector);
 
             Quaternion requiredRotation = Quaternion.LookRotation(targetforward * movementVector.z + targetRight * movementVector.x);
             transform.rotation = Quaternion.Slerp(transform.rotation, requiredRotation, Time.deltaTime * _rotationSpeed);
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    
 
 
 }

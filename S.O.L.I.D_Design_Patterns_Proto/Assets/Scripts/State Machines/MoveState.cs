@@ -15,7 +15,8 @@ public class MoveState : GroundedState
     protected override void OnUpdate()
     {
         PSC.PlayerMovement.Move(Input);
-        
+        PSC.PlayerAnimations.SetAnimMovementSpeed(Mathf.Clamp01(Input.magnitude));
+        Debug.Log(Mathf.Clamp01(Input.magnitude));
         if (Input.x == 0 && Input.z == 0)
         {
             PSC.ChangeState(PSC.IdleState);
