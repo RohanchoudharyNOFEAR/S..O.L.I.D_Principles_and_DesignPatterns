@@ -21,5 +21,13 @@ public class PlayerAnimations : MonoBehaviour
     {
         _playerAnimator.SetFloat("Speed", Speed,0.0f,Time.deltaTime);
     }
+    public void SetJumpBool(bool Jump)
+    {
+        _playerAnimator.SetBool("Jump", Jump);
+    }
+    public void SetGroundedBool(bool Grounded)
+    {
+        _playerAnimator.SetBool("Grounded", Grounded);
+    }
 
 }

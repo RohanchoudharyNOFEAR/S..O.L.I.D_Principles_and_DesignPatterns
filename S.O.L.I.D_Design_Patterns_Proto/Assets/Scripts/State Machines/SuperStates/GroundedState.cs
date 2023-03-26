@@ -8,17 +8,21 @@ public class GroundedState : PlayerStatesBase
 
     protected override void OnEnter()
     {
+        PSC.PlayerMovement.enabled = true;
+        setGravityvalue();
         Debug.Log("Entered Into GroundedState");
-          base.OnEnter();
+        base.OnEnter();
     }
     protected override void OnUpdate()
     {
       
          base.OnUpdate();
+     
         PSC.CameraController.CameraMove(PSC.playerInputs.InputMouseVector);
-        Input = PSC.playerInputs.InputMovementVector;
+        PSC.PlayerAnimations.SetGroundedBool(true);
+        PSC.PlayerAnimations.SetAnimMovementSpeed(Mathf.Clamp01(Input.magnitude));
+        handleJump();
        
-      //  Debug.Log(Input);
         Debug.Log("update call Into GroundedState");
     }
     protected override void OnExit()
@@ -26,4 +30,23 @@ public class GroundedState : PlayerStatesBase
         Debug.Log(" Exit From GroundedState");
         base.OnExit();
     }
+
+   void handleJump()
+    {
+
+        Input = PSC.playerInputs.InputMovementVector;
+     
+        if (PSC.playerInputs.InputJump)
+        {
+            PSC.playerInputs.UsedJumpInput();
+            PSC.ChangeState(PSC.JumpState);
+        }
+       
+    }
+
+    void setGravityvalue()
+    {
+       PSC.PlayerJump.verticalVelocity = -PSC.PlayerJump.Gravity * Time.deltaTime;
+    }
+
 }

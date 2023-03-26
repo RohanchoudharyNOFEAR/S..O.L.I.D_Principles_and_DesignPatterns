@@ -6,6 +6,7 @@ public class PlayerInputs : MonoBehaviour
 {
     public Vector3 InputMovementVector { get; private set; }
     public Vector2 InputMouseVector { get; private set; }
+    public bool InputJump { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerInputs : MonoBehaviour
 
         getInputs();
         getCameraInputs();
+        getJumpInput();
     }
 
     void getInputs()
@@ -35,6 +37,13 @@ public class PlayerInputs : MonoBehaviour
         InputMouseVector = new Vector2(_mouseX, _mouseY);
        // Debug.Log(InputMouseVector);
     }
+    void getJumpInput()
+    {
+        InputJump = Input.GetKeyDown(KeyCode.Space);
+        Debug.Log(InputJump);
+    }
+
+    public void UsedJumpInput() => InputJump = false;
 
 }
 
