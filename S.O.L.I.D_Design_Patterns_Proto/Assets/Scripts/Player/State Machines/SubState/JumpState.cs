@@ -15,7 +15,7 @@ public class JumpState : AbilityState
         PSC.PlayerJump.enabled = true;
         PSC.PlayerAnimations.SetJumpBool(true);
         PSC.PlayerJump.verticalVelocity = PSC.PlayerJump.JumpForce;
-       
+        PSC.PlayerJump.Jump(PSC.PlayerMovement.Cc, PSC.PlayerMovement.PlayerVelocityVector, PSC.playerInputs.InputJump);
         IsAbilityDone = true;
 
     }
@@ -29,7 +29,7 @@ public class JumpState : AbilityState
     protected override void OnUpdate()
     {
         base.OnUpdate();
-        
+        PSC.PlayerJump.Jump(PSC.PlayerMovement.Cc, PSC.PlayerMovement.PlayerVelocityVector, PSC.playerInputs.InputJump);
     }
 
    

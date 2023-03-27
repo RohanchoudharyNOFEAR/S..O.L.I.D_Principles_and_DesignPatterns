@@ -24,12 +24,12 @@ public class PlayerJump : MonoBehaviour
         
     }
 
-   public  void Jump(CharacterController Cc,Vector3 PlayerVelocityVector)
+   public  void Jump(CharacterController Cc,Vector3 PlayerVelocityVector,bool JumpInput)
     {
         if (Cc.isGrounded)
         {
             verticalVelocity = -_gravity * Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (/*Input.GetKeyDown(KeyCode.Space)*/JumpInput)
             {
                 verticalVelocity = _jumpForce;
             }

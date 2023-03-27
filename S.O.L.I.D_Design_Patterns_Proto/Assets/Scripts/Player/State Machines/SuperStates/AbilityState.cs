@@ -15,6 +15,8 @@ public class AbilityState : PlayerStatesBase
     protected override void OnExit()
     {
         base.OnExit();
+        PSC.PlayerAnimations.SetJumpBool(false);
+        PSC.playerInputs.UsedJumpInput();
     }
 
     protected override void OnUpdate()

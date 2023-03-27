@@ -14,14 +14,14 @@ public class IdleState : GroundedState
     {
        
          base.OnUpdate();
-     //   PSC.PlayerMovement.Jump(PSC.cc.isGrounded);
+     
         if (Input.x != 0 || Input.z != 0)
         {
            
             PSC.ChangeState(PSC.MoveState);
         }
 
-        Debug.Log("update call Into IdleState");
+     //   Debug.Log("update call Into IdleState");
     }
     protected override void OnExit()
     {

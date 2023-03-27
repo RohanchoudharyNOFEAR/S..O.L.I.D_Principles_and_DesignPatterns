@@ -40,7 +40,7 @@ public class PlayerInputs : MonoBehaviour
     void getJumpInput()
     {
         InputJump = Input.GetKeyDown(KeyCode.Space);
-        Debug.Log(InputJump);
+      //  Debug.Log("Input Jump="+InputJump);
     }
 
     public void UsedJumpInput() => InputJump = false;
