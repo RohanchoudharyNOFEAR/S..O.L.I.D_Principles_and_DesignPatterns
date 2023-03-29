@@ -2,26 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Mission1 : MissionBase
+public class Mission2 : MissionBase
 {
-   // public string title;
-   // public string description;
-  //  public bool isMissionComplete;
-   // public List<Objective> Objectives;
-
-
     public override void OnStart()
     {
         base.OnStart();
         isMissionComplete = false;
     }
-    
+
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-        if(isMissionComplete)
+        if (isMissionComplete)
         {
             return;
         }
@@ -36,25 +29,13 @@ public class Mission1 : MissionBase
         {
             if (objective.isComplete == false)
             {
-                if (objective.objectiveName == "Go to the White Box")
-                {
-                    if (PlayerMissionsChecks.TargetReachecdObjectiveComplete)
-                    {
-                        objective.isComplete = true;
-                        Debug.Log("target Reached");
-                    }
-                    else
-                    {
-                        allObjectivesComplete = false;
-                    }
-                }
-                else if (objective.objectiveName == "Jump")
+
+                if (objective.objectiveName == "Jump")
                 {
                     if (PlayerMissionsChecks.JumpedObjectiveComplete)
                     {
                         objective.isComplete = true;
                         Debug.Log("Jumped ");
-                        PlayerMissionsChecks.JumpedObjectiveComplete = false;
                     }
                     else
                     {
@@ -70,7 +51,7 @@ public class Mission1 : MissionBase
         if (allObjectivesComplete == true)
         {
             isMissionComplete = true;
-            Debug.Log("mission completed");
+            Debug.Log("mission2 completed");
         }
     }
 

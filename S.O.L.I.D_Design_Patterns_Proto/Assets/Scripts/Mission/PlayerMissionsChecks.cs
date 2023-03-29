@@ -8,7 +8,7 @@ public class PlayerMissionsChecks : MonoBehaviour
     private CharacterController _cC;
     private int Jumps = 1;
     private bool _jumpedObjectiveComplete = false;
-    public bool JumpedObjectiveComplete { get { return _jumpedObjectiveComplete; } private set { _jumpedObjectiveComplete = value; } }
+    public bool JumpedObjectiveComplete { get { return _jumpedObjectiveComplete; }  set { _jumpedObjectiveComplete = value; } }
     private bool _targetReachecdObjectiveComplete = false;
     public bool TargetReachecdObjectiveComplete { get { return _targetReachecdObjectiveComplete; } private set { _targetReachecdObjectiveComplete = value; } }
     // Start is called before the first frame update
