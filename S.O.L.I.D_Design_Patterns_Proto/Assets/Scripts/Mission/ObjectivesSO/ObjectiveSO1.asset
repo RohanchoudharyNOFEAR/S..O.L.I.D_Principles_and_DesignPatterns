@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ObjectiveSO1
   m_EditorClassIdentifier: 
   objectiveName: Go to the White Box
-  objectiveDescription: stand on trigger
+  objectiveDescription: Go to the White Box
   completionCriteria: 0
   rewardPoints: 100
   isComplete: 1

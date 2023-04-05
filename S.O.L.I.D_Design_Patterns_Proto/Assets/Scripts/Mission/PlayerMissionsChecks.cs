@@ -6,7 +6,8 @@ public class PlayerMissionsChecks : MonoBehaviour
 {
     private PlayerInputs _playerInputs;
     private CharacterController _cC;
-    private int Jumps = 1;
+    private int _Jumps = 1;
+    public int Jump { get { return _Jumps; } }
     private bool _jumpedObjectiveComplete = false;
     public bool JumpedObjectiveComplete { get { return _jumpedObjectiveComplete; }  set { _jumpedObjectiveComplete = value; } }
     private bool _targetReachecdObjectiveComplete = false;
@@ -26,24 +27,24 @@ public class PlayerMissionsChecks : MonoBehaviour
 
     public void IsJumpedObjectiveComplete()
     {
-       // int Jumps =0;
+      
 
         if(_playerInputs.InputJump && _cC.isGrounded && _jumpedObjectiveComplete==false)
         {
-            Jumps++;
-            Debug.Log("jumps=" +Jumps);
-            if (Jumps>=3)
+            _Jumps++;
+            Debug.Log("jumps=" +_Jumps);
+            if (_Jumps>=3)
             {
                
                 _jumpedObjectiveComplete = true;
-                Jumps = 0;
+                _Jumps = 0;
             }
             else
             {
                 _jumpedObjectiveComplete = false;
             }
         }
-      //  _jumpedObjectiveComplete = false;
+     
     }
 
     
@@ -65,5 +66,7 @@ public class PlayerMissionsChecks : MonoBehaviour
             _targetReachecdObjectiveComplete = true;
         }
     }
+
+  
 
 }

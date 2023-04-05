@@ -84,7 +84,7 @@ public class MissionManager : MonoBehaviour
         string objectivesText = "";
         foreach (Objective objective in currentMission.Objectives)
         {
-            objectivesText += objective.objectiveName + "\n ";
+            objectivesText +="->" + objective.objectiveDescription + "\n ";
             if (objective.isComplete)
                 objectivesText += "Complete!\n";
             //else

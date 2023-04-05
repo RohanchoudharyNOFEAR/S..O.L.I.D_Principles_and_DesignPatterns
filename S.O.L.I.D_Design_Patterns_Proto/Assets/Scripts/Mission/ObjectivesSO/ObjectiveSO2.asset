@@ -16,4 +16,4 @@ MonoBehaviour:
   objectiveDescription: Jump 3 Times
   completionCriteria: 3
   rewardPoints: 0
-  isComplete: 0
+  isComplete: 1
