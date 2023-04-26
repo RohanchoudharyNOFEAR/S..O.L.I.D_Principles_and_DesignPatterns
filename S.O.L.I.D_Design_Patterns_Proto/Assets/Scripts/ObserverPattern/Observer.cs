@@ -17,18 +17,18 @@ public class Observer : MonoBehaviour
 
     private void OnEnable()
     {
-        Subject.OnJumpingEvent += PlayJumpingAudio;
-        Subject.OnMission1CompleteEvent += PlayMission1completeAudio;
-        Subject.OnMission2CompleteEvent += PlayMission2completeAudio;
-        Subject.OnLevelStartsEvent += PlayLevelStartAudio;
+        AbstractSubject.OnJumpingEvent += PlayJumpingAudio;
+        AbstractSubject.OnMission1CompleteEvent += PlayMission1completeAudio;
+        AbstractSubject.OnMission2CompleteEvent += PlayMission2completeAudio;
+        AbstractSubject.OnLevelStartsEvent += PlayLevelStartAudio;
     }
 
     private void OnDisable()
     {
-        Subject.OnJumpingEvent -= PlayJumpingAudio;
-        Subject.OnMission1CompleteEvent -= PlayMission1completeAudio;
-        Subject.OnMission2CompleteEvent -= PlayMission2completeAudio;
-        Subject.OnLevelStartsEvent -= PlayLevelStartAudio;
+        AbstractSubject.OnJumpingEvent -= PlayJumpingAudio;
+        AbstractSubject.OnMission1CompleteEvent -= PlayMission1completeAudio;
+        AbstractSubject.OnMission2CompleteEvent -= PlayMission2completeAudio;
+        AbstractSubject.OnLevelStartsEvent -= PlayLevelStartAudio;
     }
 
     // Start is called before the first frame update

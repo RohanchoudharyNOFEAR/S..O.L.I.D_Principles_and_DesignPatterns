@@ -4,5 +4,38 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/StatePatternSampleScene.unity
+    guid: fbbecb1fbe39e36498b77e571fb9e2d9
+  - enabled: 1
+    path: Assets/Scenes/AdapterPatternSampleScene.unity
+    guid: 9b568fd3d070d6d46abc558d66cb2c78
+  - enabled: 1
+    path: Assets/Scenes/CommandPatternSampleScene.unity
+    guid: 0cedd7d1265f976499f35f878877a513
+  - enabled: 1
+    path: Assets/Scenes/DecoratorPatternSampleScene.unity
+    guid: ccfbb05fdfcc10341aaa06db3975eb24
+  - enabled: 1
+    path: Assets/Scenes/EventBusSampleScene.unity
+    guid: a756d075750209e45b188b2540ae3439
+  - enabled: 1
+    path: Assets/Scenes/FacafePattern.unity
+    guid: 7ca0993d0f57d9c478dcb3de068e6875
+  - enabled: 1
+    path: Assets/Scenes/ObjectPoolingSampleScene.unity
+    guid: b2b9c46759f591e45a558ecf75e35079
+  - enabled: 1
+    path: Assets/Scenes/ObserverPattern.unity
+    guid: 28dabedf3f4d3a04899f4a46c10c4d3b
+  - enabled: 1
+    path: Assets/Scenes/StratagyPatternSampleScene.unity
+    guid: fd74d7395aa75184cb78b77b24c94066
+  - enabled: 1
+    path: Assets/Scenes/VisitorPatternSampleScene.unity
+    guid: 078b435978e3bb3459bfbbb8a62b7382
   m_configObjects: {}

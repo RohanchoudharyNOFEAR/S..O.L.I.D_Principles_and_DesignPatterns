@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Subject : MonoBehaviour
+public class AbstractSubject : MonoBehaviour
 {
     public Mission1 M1;
     public Mission2 M2;
